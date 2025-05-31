@@ -1,0 +1,34 @@
+# config.yaml
+
+app:
+  title: "Industrial CT Defect Detection"
+  description: "Detect structural defects in industrial CT images using AI models."
+
+models:
+  yolo:
+    name: "YOLOv8n"
+    weights_path: "models/yolov8n_defect.pt"
+    confidence_threshold: 0.4
+    device: "cuda"  # options: "cpu", "cuda"
+
+  cnn:
+    name: "CNN-Light"
+    weights_path: "models/cnn_defect_model.pth"
+    input_size: [256, 256]
+    device: "cuda"
+
+preprocessing:
+  resize: [256, 256]
+  normalize: true
+  apply_clahe: false  # Contrast Limited Adaptive Histogram Equalization
+
+ui:
+  default_model: "YOLOv8n"
+  use_gpu_checkbox: true
+  show_feedback_box: true
+
+logging:
+  enable: true
+  level: "INFO"
+  log_file: "logs/app.log"
+
