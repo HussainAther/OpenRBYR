@@ -2,13 +2,23 @@
 import streamlit as st
 import cv2
 import numpy as np
+import yaml
 from PIL import Image
 from pathlib import Path
 from models.yolo_detector import detect_defects_yolo
 from models.cnn_detector import detect_defects_cnn
 
+# Load config.yaml
+with open("config.yaml", "r") as f:
+    config = yaml.safe_load(f)
+
 st.set_page_config(page_title="CT Defect Detection", layout="centered")
 st.title("🧠 Industrial CT Defect Detection Dashboard")
+st.title(config["ui"]["title"])
+st.write(config["ui"]["welcome_message"])
+
+confidence = st.slider("Confidence Threshold", 0.0, 1.0, config["thresholds"]["confidence"])
+iou = st.slider("IoU Threshold", 0.0, 1.0, config["thresholds"]["iou"])
 
 # ---- Model Caching ----
 @st.cache_resource
