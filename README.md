@@ -1,5 +1,10 @@
 # OpenRBYR: A Ray-by-Ray CT Simulation Toolkit
 
+![PyPI](https://img.shields.io/pypi/v/openrbyr)
+![CI](https://github.com/HussainAther/OpenRBYR/actions/workflows/ci.yml/badge.svg)
+![Docs](https://readthedocs.org/projects/openrbyr/badge/?version=latest)
+
+
 ## 📌 Overview
 OpenRBYR is an open-source Python package for simulating Ray-by-Ray Computed Tomography (RBYRCT) scan paths. This toolkit enables researchers to explore and develop CT imaging methodologies with a focus on precision and low-dose imaging techniques.
 
