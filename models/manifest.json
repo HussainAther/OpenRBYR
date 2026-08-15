@@ -1,0 +1,9 @@
+{
+  "yolov8n_defect": {
+    "filename": "yolov8n_defect.onnx",
+    "description": "YOLOv8n model trained on synthetic CT defect dataset",
+    "input_size": "256x256",
+    "type": "ONNX"
+  }
+}
+

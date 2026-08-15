@@ -23,6 +23,8 @@ preprocessing:
   apply_clahe: false  # Contrast Limited Adaptive Histogram Equalization
 
 ui:
+  title: "CT Defect Detection Dashboard"
+  welcome_message: "Upload a CT image and run detection."
   default_model: "YOLOv8n"
   use_gpu_checkbox: true
   show_feedback_box: true
